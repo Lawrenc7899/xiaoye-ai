@@ -1,4 +1,4 @@
-# NanoBanana - AI 内容创作平台
+# 小野AI 内容创作平台
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
 
@@ -10,8 +10,8 @@
 
 ## 截图预览
 
-| 生成页面 | 灵感广场 |
-|----------|----------|
+| 灵感广场                                 | 生成界面                                      |
+|--------------------------------------|-------------------------------------------|
 | ![生成](docs/screenshots/generate.png) | ![灵感广场](docs/screenshots/inspiration.png) |
 
 ## 功能特性

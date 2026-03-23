@@ -1,4 +1,4 @@
-# NanoBanana - AI Content Creation Platform
+#  小野AI Content Creation Platform
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
 
@@ -10,7 +10,7 @@ Open-source multi-modal AI content creation platform. Generate images and videos
 
 ## Screenshots
 
-| Generate | Inspiration |
+| Inspiration | Generate |
 |----------|-------------|
 | ![Generate](docs/screenshots/generate.png) | ![Inspiration](docs/screenshots/inspiration.png) |
 
